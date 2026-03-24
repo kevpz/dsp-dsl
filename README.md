@@ -6,9 +6,9 @@ This project starts from a simple model of DSP.
 
 A signal is a discrete-time stream of samples:
 
-\[
-x : \mathbb{Z} \to \mathbb{R}
-\]
+```txt
+x : Z -> R
+```
 
 A DSP block is an operator over such streams.
 
@@ -16,15 +16,16 @@ There are two important cases:
 
 - a pure pointwise operator:
 
-\[
-y[n] = F(x_1[n], x_2[n], \dots)
-\]
+```txt
+y[n] = F(x1[n], x2[n], ...)
+```
 
 - a causal stateful operator:
 
-\[
-s[n+1] = U(s[n], x[n]), \quad y[n] = G(s[n], x[n])
-\]
+```txt
+s[n+1] = U(s[n], x[n])
+y[n]   = G(s[n], x[n])
+```
 
 ## Design Decision
 
